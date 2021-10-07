@@ -1,7 +1,5 @@
-class Bullet {
-   int lives;
-  PVector location;
-  PVector velocity;
+class Bullet extends GameObject{
+  
   
   Bullet() {
     lives = 1;
@@ -16,8 +14,6 @@ void show() {
   ellipse(location.x, location.y, 10, 10);
 }
 
-void act() {
-  location.add(velocity);
-}
+
 
 }
