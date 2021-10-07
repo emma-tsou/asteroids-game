@@ -1,9 +1,6 @@
 class Ship {
   
   //1. Instance Variables
-  int lives;
-  PVector location;
-  PVector velocity;
   PVector direction;
   //2. Constructor(s)
   Ship() {
@@ -27,6 +24,7 @@ class Ship {
   }
   
   void act() {
+   super.act();
     location.add(velocity); 
 
     if (upkey) velocity.add(direction);
@@ -34,9 +32,6 @@ class Ship {
     if (leftkey) direction.rotate( -radians(5) );
     if (rightkey) direction.rotate( radians(5) ); 
     if (spacekey) myBullets.add(new Bullet());
-    if (location.y < -50) location.y = height+50;
-    if (location.y > height+50) location.y = -50;
-    if (location.x < -50) location.x = width+50; 
-    if (location.x > width+50) location.x = -50;
+  
   }
 }
