@@ -7,7 +7,7 @@ class Bullet {
     lives = 1;
     location = new PVector(myShip.location.x, myShip.location.y);
     velocity = new PVector(myShip.direction.x, myShip.direction.y);
-    
+     velocity.setMag(10);
 }
 
 void show() {
