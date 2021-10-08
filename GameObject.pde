@@ -14,6 +14,6 @@ class GameObject {
   }
   
   void act() {
-    super.act();
+    
   }
 }
