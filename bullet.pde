@@ -14,6 +14,9 @@ void show() {
   ellipse(location.x, location.y, 10, 10);
 }
 
-
+void act() {
+    super.act();
+    
+ }
 
 }
