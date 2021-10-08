@@ -19,10 +19,15 @@ void draw() {
   
 
   int i = 0;
-  GameObject myObj = myObjects.get(i);
+ while (i < myObjects.size()) {
+ GameObject myObj = myObjects.get(i);
 myObj.show();
 myObj.act();
-    i++;
+    if (myObj.lives == 0) {
+      myObjects.remove(i);
+    } else {
+      i++;
+    }
   }
 }
 
