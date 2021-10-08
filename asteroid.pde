@@ -9,7 +9,7 @@ class Asteroid extends GameObject {
   void show() {
  noFill();
  stroke(255);
- ellipse(location.x, location.y, 100, 100);
+ ellipse(location.x, location.y, size, size);
  
   }
   
