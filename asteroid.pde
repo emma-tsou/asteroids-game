@@ -19,7 +19,11 @@ class Asteroid extends GameObject {
   while (i < myObjects.size()) {
  GameObject myObj = myObjects.get(i);
  if (myObj instanceof Bullet) {
-  }
+ if (dist(location.x, location.y, myObj.location.x, myObj.location.y) <= size/2 + myObj.size) 
+          myObj.lives = 0;
+        lives = 0; }
   i++
   }
+}
+
 }
