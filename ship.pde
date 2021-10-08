@@ -1,4 +1,4 @@
-class Ship {
+class Ship extends GameObject{
   
   //1. Instance Variables
   PVector direction;
