@@ -34,7 +34,8 @@ shotTimer++;
     if (downkey) velocity.sub(direction);
     if (leftkey) direction.rotate( -radians(5) );
     if (rightkey) direction.rotate( radians(5) ); 
-    if (spacekey&& shotTimer >= threshold) { myObjects.add(new Bullet());
+    if (spacekey&& shotTimer >= threshold) { 
+    myObjects.add(new Bullet());
   shotTimer = 0;
     }
   }
