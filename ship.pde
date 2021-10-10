@@ -2,12 +2,15 @@ class Ship extends GameObject{
   
   //1. Instance Variables
   PVector direction;
+  int shotTimer, threshold;
   //2. Constructor(s)
   Ship() {
     lives = 3;
     location = new PVector(width/2, height/2);
     velocity = new PVector(0, 0);
     direction = new PVector(0, -0.1);
+     shotTimer = 0;
+    threshold = 60;
   }
  
   
@@ -25,13 +28,14 @@ class Ship extends GameObject{
   
   void act() {
    super.act();
-    location.add(velocity); 
-
+    
+shotTimer++;
     if (upkey) velocity.add(direction);
     if (downkey) velocity.sub(direction);
     if (leftkey) direction.rotate( -radians(5) );
     if (rightkey) direction.rotate( radians(5) ); 
-    if (spacekey) myBullets.add(new Bullet());
-  
+    if (spacekey&& shotTimer >= threshold) { myObjects.add(new Bullet());
+  shotTimer = 0;
+    }
   }
 }
