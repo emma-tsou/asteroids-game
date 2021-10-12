@@ -30,7 +30,10 @@ class Ship extends GameObject{
    super.act();
     
 shotTimer++;
-    if (upkey) velocity.add(direction);
+    if (upkey) {
+      velocity.add(direction);
+      myObjects.add(new Fire());
+    }
     if (downkey) velocity.sub(direction);
     if (leftkey) direction.rotate( -radians(5) );
     if (rightkey) direction.rotate( radians(5) ); 
