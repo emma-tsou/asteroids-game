@@ -15,6 +15,6 @@ class GameObject {
   }
   
   void act() {
-    
+     location.add(velocity);
   }
 }
